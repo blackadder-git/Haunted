@@ -3,53 +3,64 @@ package com.example.haunted
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
 class Attic : AppCompatActivity(), Room {
 
-    override val description = "Attic"
+    override val room = "Attic"
+    // override val description = "Attic"
+
+    private var action : Action = Action()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_attic)
 
+        // determine whether the player is scared
         if (player.isScared()) {
             paranormal()
         }
 
-        var hp = findViewById<TextView>(R.id.hp)
-        hp.text = player.health.toString()
-
-        // var room = findViewById<TextView>(R.id.atticText)
-        // room.text = description
-
-        // go to settings
-        val settings = findViewById<Button>(R.id.settings)
-        settings.setOnClickListener {
-            val intent = Intent(this, Settings::class.java)
-            intent.putExtra("roomKey", "Attic")
-            startActivity(intent)
-        }
+        // load health and settings icon
+        loadFragment()
 
         // search room for clues
         val search = findViewById<Button>(R.id.search)
         search.setOnClickListener {
-            search()
+            val result = action.search(room)
+            var room = findViewById<TextView>(R.id.atticText)
+            room.text = result
+
+            // Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
         }
 
         // go to landing
         val landing = findViewById<Button>(R.id.landing)
         landing.setOnClickListener {
+            Log.d("DEBUG:", "Go to landing")
             val intent = Intent(this, Landing::class.java)
             startActivity(intent)
         }
     }
 
-    // what happens when you search this room?
-    override fun search() {
-        Toast.makeText(this, "Search Attic", Toast.LENGTH_SHORT).show()
+    fun loadFragment() {
+        // create a bundle
+        val bundle = Bundle()
+        // add information to pass to fragment
+        bundle.putString("hp", player.health.toString())
+        bundle.putString("room", room)
+        // create object and attach arguments
+        val testFragment = Test()
+        testFragment.arguments = bundle
+
+        // create fragment
+        val fragment = supportFragmentManager.beginTransaction()
+        fragment.add(R.id.fragment, testFragment)
+        fragment.commit()
     }
 
     override fun paranormal() {

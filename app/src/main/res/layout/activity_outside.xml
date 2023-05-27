@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dining">
+    tools:context=".Outside">
 
     <fragment
         android:id="@+id/fragment"
@@ -19,11 +19,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/diningText"
+        android:id="@+id/porchText"
         android:layout_width="337dp"
         android:layout_height="199dp"
         android:gravity="center_vertical"
-        android:text="@string/desc_dining"
+        android:text="@string/desc_outside"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,10 +32,10 @@
         app:layout_constraintVertical_bias="0.565" />
 
     <ImageView
-        android:id="@+id/diningImage"
+        android:id="@+id/porchImage"
         android:layout_width="match_parent"
         android:layout_height="283dp"
-        android:src="@drawable/dining"
+        android:src="@drawable/house"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.083" />
@@ -52,28 +52,14 @@
         app:layout_constraintVertical_bias="0.404" />
 
     <Button
-        android:id="@+id/kitchen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/kitchen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.281"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
-
-    <Button
         android:id="@+id/foyer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/foyer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.693"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.762" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

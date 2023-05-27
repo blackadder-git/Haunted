@@ -6,18 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".Bedroom">
 
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.haunted.Test"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/bedroomText"
         android:layout_width="337dp"
         android:layout_height="199dp"
         android:gravity="center_vertical"
-        android:text="You enter a large room furnished with an antique four poster bed
-and a decorative patchwork quilt. A table stands in the corner and on
-it a jug filled with stagnant water. The wallpaper
-is drab, peeling in places. There are no pictures on the walls, only square and rectangular
-pale patches where pictures once hung. An antique Windsor chair
-is next to the fire; white sheets cover a large antique wardrobe and an antique
-dresser."
+        android:text="@string/desc_bedroom"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,55 +37,14 @@ dresser."
         android:layout_height="283dp"
         android:src="@drawable/bedroom"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/health"
-        app:layout_constraintVertical_bias="0.083" />
-
-    <TextView
-        android:id="@+id/health"
-        android:layout_width="376dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:gravity="center_vertical"
-        android:paddingStart="20dp"
-        android:text="Health"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/hp"
-        android:layout_width="72dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:gravity="center_vertical"
-        android:paddingStart="20dp"
-        android:text="100"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/health"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.083" />
 
     <Button
         android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:text="@string/search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +55,7 @@ dresser."
         android:id="@+id/bathroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bathroom"
+        android:text="@string/bathroom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.281"
@@ -102,7 +67,7 @@ dresser."
         android:id="@+id/landing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Landing"
+        android:text="@string/landing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.693"

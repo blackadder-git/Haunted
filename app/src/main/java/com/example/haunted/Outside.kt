@@ -3,22 +3,24 @@ package com.example.haunted
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
-class Parlor : AppCompatActivity(), Room {
+import android.media.MediaPlayer
+import android.util.Log
 
-    override val room = "Parlor"
-    // override val description = "Parlor
+class Outside : AppCompatActivity(), Room {
+
+    override val room = "Outside"
+    // override val description = "Porch"
 
     private var action : Action = Action()
+    private var mediaPlayer : MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_parlor)
+        setContentView(R.layout.activity_outside)
 
         // determine whether the player is scared
         if (player.isScared()) {
@@ -31,18 +33,22 @@ class Parlor : AppCompatActivity(), Room {
         // search room for clues
         val search = findViewById<Button>(R.id.search)
         search.setOnClickListener {
-            val result = action.search(room)
-            var room = findViewById<TextView>(R.id.parlorText)
+            val result = action.search("Outside")
+            var room = findViewById<TextView>(R.id.porchText)
             room.text = result
 
             // Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
         }
 
-        // go to hall
-        val hall = findViewById<Button>(R.id.hall)
-        hall.setOnClickListener {
-            Log.d("DEBUG:", "Go to hall")
-            val intent = Intent(this, Hall::class.java)
+        // go to foyer
+        val foyer = findViewById<Button>(R.id.foyer)
+        foyer.setOnClickListener {
+            Log.d("DEBUG:", "Go to foyer")
+            println("DEBUG: go to foyer")
+
+            action.openDoor(this)
+
+            val intent = Intent(this, Foyer::class.java)
             startActivity(intent)
         }
     }
@@ -62,8 +68,7 @@ class Parlor : AppCompatActivity(), Room {
         fragment.add(R.id.fragment, testFragment)
         fragment.commit()
     }
-
-     override fun paranormal() {
+    override fun paranormal() {
         var scare = ""
         val ghost = (1..99).shuffled().last()
 
@@ -80,4 +85,6 @@ class Parlor : AppCompatActivity(), Room {
 
         Toast.makeText(this, "$scare", Toast.LENGTH_SHORT).show()
     }
+
+
 }

@@ -1,3 +1,77 @@
 <resources>
     <string name="app_name">Haunted</string>
+    <string name="begin">Begin</string>
+    <string name="health">Health</string>
+    <string name="search">Search</string>
+    <string name="attic">Attic</string>
+    <string name="bathroom">Bathroom</string>
+    <string name="bedroom">Bedroom</string>
+    <string name="cellar">Cellar</string>
+    <string name="dining">Dining</string>
+    <string name="foyer">Foyer</string>
+    <string name="hall">Hall</string>
+    <string name="kitchen">Kitchen</string>
+    <string name="landing">Landing</string>
+    <string name="nursery">Nursery</string>
+    <string name="parlor">Parlor</string>
+    <string name="outside">Outside</string>
+    <string name="stairs">Stairs</string>
+    <string name="introduction">Your great Uncle Pineda left very specific instructions.
+\n\nTo earn his fortune,
+\nYou must spend a night in this old house</string>
+    <string name="desc_attic">The attic is crossed with enormous oak purlins and vertical
+supporting beams. Pipes and wires will make exploration difficult.
+Movement is only possible to within a few feet of the edges of the space where the roof
+angles down to the floor making some parts of the attic too cramped to reach.
+In the eaves you see evidence of rats and birds.</string>
+    <string name="desc_bathroom">A simple bathroom with a roll-top bath whose inner surface
+is chipped and stained. An antique washstand with basin and a jug of water sit
+on one side. On the other, a cracked ceramic toilet can be seen beneath a cast
+iron cistern which is bolted high on the wall above.</string>
+    <string name="desc_bedroom">You enter a large room furnished with an antique four poster bed
+and a decorative patchwork quilt. A table stands in the corner and on
+it a jug filled with stagnant water. The wallpaper
+is drab, peeling in places. There are no pictures on the walls, only square and rectangular
+pale patches where pictures once hung. An antique Windsor chair
+is next to the fire; white sheets cover a large antique wardrobe and an antique
+dresser.</string>
+    <string name="desc_cellar">The cellar is dark, dank and creepy. The ceiling is just four
+feet overhead and consists of thick wooden beams, pipes and electrical wiring
+filled with spiders and cobwebs. Rusty metal shelves stand on
+the other side of the room and these are filled with paint tins so rusty they
+are completely orange and so densely covered with cobwebs that they are almost
+completely hidden.</string>
+    <string name="desc_dining">A large rectangular dining table stands in the middle of this room,
+an ornate chandelier hangs above. Cabinets standing around the edges of the
+room contain photographs and ornaments</string>
+    <string name="desc_foyer">You walk into small foyer. Cobwebs fill the dimly lit
+room. To one side you see a case of broken stairs or you can venture
+into the hall that will take you deeper into the house.</string>
+    <string name="desc_hall">The hall is covered in torn wall paper and filth. This is not a happy place to be.</string>
+    <string name="desc_kitchen">The kitchen has been refurbished to appear as it must once have
+been in the 19th century when the house was first built. The larder is half filled
+with waxwork food, cans and old tins. Drawers are filled with cutlery and
+cupboards furnished with pots, pans and dishes.</string>
+    <string name="desc_landing">Top of the stairs. There are doors and a ladder up to the attic.</string>
+    <string name="desc_nursery">This bedroom has been furnished to resemble an old fashioned nursery.
+A crib stands in the corner. Next to it, you see a soft bear and a large wooden dresser with six drawers.
+A rocking horse, doll house and a box filled with wooden toys also occupy the space. The wall is decorated
+around its uppermost part with an A,B,C mural. Next to each,  picture has been hand painted (A for Apple,
+B for Bear, C is for Carrot, etc)</string>
+    <string name="desc_parlor">The parlor is decorated with 19th century wallpaper, furnishings
+and ornaments. A crudely made mannequin sits on the couch, his clothing is typical of
+those worn in the 1800s. The only non-period detail is a broken television which stands
+on a low table against the inner wall. A portrait hangs over the mantle. There is a piano
+at the far end of the room and next to the fire is a basket filled with wood.</string>
+    <string name="desc_outside">The house is tall and thin. It is made from
+large rotting planks. They feel rough; like they have been sandwiched together by
+disgruntled laborers. Vines cling to the house, thirsting for
+what little sun can reach them in the shadows. Windows, rattling
+vigorously from the now howling wind sound as though they are about
+to fall from their worm eaten frames.</string>
+    <string name="desc_stairs">The broken stairs will take you up or down.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

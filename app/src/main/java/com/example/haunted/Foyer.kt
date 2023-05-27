@@ -1,47 +1,59 @@
 package com.example.haunted
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class Foyer : AppCompatActivity(), Room {
 
-    override val description = "Foyer"
+    override val room = "Foyer"
+    // override val description = "Foyer"
+
+    private var action : Action = Action()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foyer)
 
+        // determine whether the player is scared
         if (player.isScared()) {
             paranormal()
         }
 
+        // load health and settings icon
+        loadFragment()
+
+        /*
         var hp = findViewById<TextView>(R.id.hp)
         hp.text = player.health.toString()
 
-        // var room = findViewById<TextView>(R.id.foyerText)
-        // room.text = description
-
         // go to settings
-        val settings = findViewById<Button>(R.id.settings)
+        val settings = findViewById<ImageView>(R.id.gear)
         settings.setOnClickListener {
             val intent = Intent(this, Settings::class.java)
             intent.putExtra("roomKey", "Foyer")
             startActivity(intent)
         }
+        */
 
         // search room for clues
         val search = findViewById<Button>(R.id.search)
         search.setOnClickListener {
-            search()
+            val result = action.search(room)
+            var room = findViewById<TextView>(R.id.foyerText)
+            room.text = result
+
+            // Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
         }
 
         // go to hall
         val hall = findViewById<Button>(R.id.hall)
         hall.setOnClickListener {
+            Log.d("DEBUG:", "Go to hall")
             val intent = Intent(this, Hall::class.java)
             startActivity(intent)
         }
@@ -49,21 +61,34 @@ class Foyer : AppCompatActivity(), Room {
         // go to stairs
         val stairs = findViewById<Button>(R.id.stairs)
         stairs.setOnClickListener {
+            Log.d("DEBUG:", "Go to stairs")
             val intent = Intent(this, Stairs::class.java)
             startActivity(intent)
         }
 
-        // go to porch
-        val porch = findViewById<Button>(R.id.porch)
+        // go outside
+        val porch = findViewById<Button>(R.id.outside)
         porch.setOnClickListener {
-            val intent = Intent(this, Porch::class.java)
+            Log.d("DEBUG:", "Go outside")
+            val intent = Intent(this, Outside::class.java)
             startActivity(intent)
         }
     }
 
-    // what happens when you search this room?
-    override fun search() {
-        Toast.makeText(this, "Search Foyer", Toast.LENGTH_SHORT).show()
+    fun loadFragment() {
+        // create a bundle
+        val bundle = Bundle()
+        // add information to pass to fragment
+        bundle.putString("hp", player.health.toString())
+        bundle.putString("room", room)
+        // create object and attach arguments
+        val testFragment = Test()
+        testFragment.arguments = bundle
+
+        // create fragment
+        val fragment = supportFragmentManager.beginTransaction()
+        fragment.add(R.id.fragment, testFragment)
+        fragment.commit()
     }
 
     override fun paranormal() {

@@ -1,8 +1,9 @@
 package com.example.haunted
 
 interface Room {
-    val description: String
+    val room: String
+    //val description: String
 
-    fun search()
+    //fun search()
     fun paranormal()
 }

@@ -1,11 +1,13 @@
 package com.example.haunted
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
 var player = Player()
+var house = House()
 val paranormal = Paranormal()
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val porch = findViewById<Button>(R.id.begin)
         porch.setOnClickListener {
-            val intent = Intent(this, Porch::class.java)
+            val intent = Intent(this, Outside::class.java)
             startActivity(intent)
         }
     }

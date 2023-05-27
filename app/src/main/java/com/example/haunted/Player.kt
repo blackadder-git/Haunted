@@ -25,4 +25,6 @@ class Player(health: Int = 100) {
         }
         return coinToss
     }
+
+
 }

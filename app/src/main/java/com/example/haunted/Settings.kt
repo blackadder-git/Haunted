@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-
 class Settings : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,5 +24,14 @@ class Settings : AppCompatActivity() {
             val intent = Intent(this, roomClass)
             startActivity(intent)
         }
+
+        /* TODO: I know I want to use dataStore here but how ?
+        suspend fun incrementCounter() {
+            Context.dataStore.edit { settings ->
+                val currentCounterValue = settings["health"] ?: 0
+                settings["health""] = player.health
+            }
+        }
+         */
     }
 }

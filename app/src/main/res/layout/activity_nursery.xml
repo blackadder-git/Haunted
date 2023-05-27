@@ -6,16 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".Nursery">
 
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.haunted.Test"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/nurseryText"
         android:layout_width="337dp"
         android:layout_height="199dp"
         android:gravity="center_vertical"
-        android:text="This bedroom has been furnished to resemble an old fashioned nursery.
-A crib stands in the corner. Next to it, you see a soft bear and a large wooden
-dresser with six drawers. A rocking horse, doll house and a box filled with wooden
-toys also occupy the space. The wall is decorated around its uppermost part with an
-A,B,C mural. Next to each,  picture has been hand painted (A for Apple, B for Bear, C is for Carrot, etc)"
+        android:text="@string/desc_nursery"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,55 +37,14 @@ A,B,C mural. Next to each,  picture has been hand painted (A for Apple, B for Be
         android:layout_height="283dp"
         android:src="@drawable/nursery"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/health"
-        app:layout_constraintVertical_bias="0.083" />
-
-    <TextView
-        android:id="@+id/health"
-        android:layout_width="376dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:gravity="center_vertical"
-        android:paddingStart="20dp"
-        android:text="Health"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/hp"
-        android:layout_width="72dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:gravity="center_vertical"
-        android:paddingStart="20dp"
-        android:text="100"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/health"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.083" />
 
     <Button
         android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:text="@string/search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +55,7 @@ A,B,C mural. Next to each,  picture has been hand painted (A for Apple, B for Be
         android:id="@+id/landing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Landing"
+        android:text="@string/landing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

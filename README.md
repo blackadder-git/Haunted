@@ -1,8 +1,8 @@
 # Overview
 
-Once opened, this app has a welcome screen that explains the game. As the sole inheritor of your uncle's fortune, you must find the key hidden deep within the haunted house. Choose where to explore in the house.
+Once opened, this app has a welcome screen that explains the game. As the sole inheritor of your uncle's fortune, you must find the key hidden deep within the haunted house. Choose where to explore.
 
-I wanted to create a game that my daughters could play. Building an Android app is a good way to learn the technology and develop something they can use. This is really the first app I've developed so I wanted beyond hello world but still within reach.
+I wanted to create a game that my daughters could play. Building an Android app is a good way to learn the technology and develop something they can use. This is one of the first Kotlin apps I've developed so I wanted build something beyond hello world but still within reach.
 
 # Development Environment
 

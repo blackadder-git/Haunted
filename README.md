@@ -4,8 +4,6 @@ Once opened, this app has a welcome screen that explains the game. As the sole i
 
 I wanted to create a game that my daughters could play. Building an Android app is a good way to learn the technology and develop something they can use. This is really the first app I've developed so I wanted beyond hello world but still within reach.
 
-[Software Demo Video](https://github.com/blackadder-git/byui/tree/main/cse310/haunted.html)
-
 # Development Environment
 
 * Android Studio 2022.2.1 Patch 1
